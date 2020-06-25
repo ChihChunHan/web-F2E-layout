@@ -1,0 +1,115 @@
+.layout0625{
+  @include padding('',1);
+  background-color: #eee;
+  width: 100%;
+  > a > img {
+    @include margin(x,auto);
+    @include margin(y,1);
+    border: 1px dotted #000;
+  }
+
+  .container {
+    @include padding(y,2);
+  }
+
+  h1 {
+    @include margin(bottom,2);
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 900;
+  }
+
+  p {
+    @include margin(bottom,1);
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+
+  span {
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .card-img{
+    background-size: cover;
+  }
+  .card-body{
+    @include padding('',2);
+  }
+
+  .temp {
+    box-shadow: 0px 0px 20px -5px rgba(#000,0.3);
+    @include margin(bottom,1);
+    background-color: #fff;
+    border-radius: 10px;
+    height: 400px;
+  }
+
+  .temp-1{
+    color: #000;
+    .card{
+      &-img {
+        border-radius: 10px 10px 0 0 ;
+        background-image: url("https://picsum.photos/300/200/?random=1");
+        flex-grow: 1;
+      }
+    }
+  }
+  .temp-2{
+    &.card-img{
+      background-image: 
+      linear-gradient(to top,rgba(0,0,0,0.3) 30%, transparent 60%),
+      url("https://picsum.photos/300/400/?random=1");
+    }
+    .card{
+      &-body{
+        color: #fff;
+        height: 100%;
+      }
+    }
+    .play-icon{
+      @include margin(bottom,2);
+      width: 50px;
+      height: 50px;
+      background-color: rgba(#000,0.5);
+      border-radius: 50%;
+      position: relative;
+      &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        background-image: linear-gradient(45deg,transparent 50%,#fff 50%);
+        transform:translate(-75%,-50%) scaleY(0.5) rotate(45deg) ;
+      }
+    }
+  }
+  .temp-3{
+    &.card-img{
+      background-image: 
+      linear-gradient(to top,rgba(0,0,0,0.3) 30%, transparent 60%),
+      url("https://picsum.photos/300/400/?random=2");
+    }
+    .card{
+      &-body{
+        color: #fff;
+        height: 100%;
+        span {
+          font-size: 1rem;
+          @include padding(bottom,1);
+        }
+      }
+    }
+  }
+}
