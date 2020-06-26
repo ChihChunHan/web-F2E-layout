@@ -1,14 +1,15 @@
-@import './base/reset';
-@import './base/typography';
+@import '../../myToolBox/sass-toolbox/base/reset';
 
-@import './helpers/variables';
-@import './helpers/function';
-@import './helpers/mixin';
-@import './helpers/utilities';
+@import '../../myToolBox/sass-toolbox/helpers/variables';
+@import '../../myToolBox/sass-toolbox/helpers/function';
+@import '../../myToolBox/sass-toolbox/helpers/mixin';
+@import '../../myToolBox/sass-toolbox/helpers/utilities';
 
-@import './layout/grid';
+@import '../../myToolBox/sass-toolbox/layout/grid';
+@import '../../myToolBox/sass-toolbox/layout/typography';
 
-@import './page/0625.scss'
+@import './page/0625.scss';
+@import './page/0626.scss'
 
 
 

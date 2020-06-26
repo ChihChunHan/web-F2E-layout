@@ -51,6 +51,9 @@
     background-color: #fff;
     border-radius: 10px;
     height: 400px;
+    @include rwd(md){
+      height: 600px;
+    };
   }
 
   .temp-1{

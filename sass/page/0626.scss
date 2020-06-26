@@ -1,0 +1,145 @@
+$c1:darkred;
+
+%deco {
+  &::before {
+    content: "___";
+    @include margin(bottom,1);
+    display: block;
+    text-align: left;
+    width: 100%;
+    color: $c1;
+  }
+  &::after {
+    content: "___";
+    display: block;
+    text-align: right;
+
+    width: 100%;
+    color: $c1;
+  }
+}
+
+.layout0626 {
+  @include padding("", 2);
+  > img {
+    @include margin(x, auto);
+    border: 1px solid #000;
+  }
+
+  .container {
+    @include margin(y,3);
+  }
+
+  .main {
+    > h1 {
+      font-size: 2em;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+    > h6 {
+      @include margin(bottom,1);
+      color: #ddd;
+      @extend %deco;
+    }
+
+    .card {
+      flex-basis: 31%;
+      @include margin(bottom,3);
+      &-img {
+        > img {
+          width: 100%;
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+      &-body {
+        > .info {
+          margin-top: 0.5rem;
+          span{
+            font-size: 0.8rem;
+            @include nth(1){
+              color: #555;
+              margin-right: 0.4rem;
+            };
+            @include nth(-1){
+              color: $c1;
+            };
+          }
+        }
+        > .title {
+          margin: 15px 0;
+          font-size: 1.2rem;
+          font-weight: 700;
+        }
+        > .footer {
+          span {
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #ddd;
+            font-size: 0.9rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    footer {
+      margin: 20px 0;
+      a {
+        font-size: 1.2em;
+        color: $c1;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+
+  .side {
+    @include rwd(lg){
+      @include padding(left,4);
+    };
+  }
+
+  .hashtag {
+    .content {@extend %deco}
+    .tags{
+      flex-wrap: wrap;
+      a {
+        @include margin(right,1);
+        text-decoration: underline;
+        color: $c1;
+      }
+    }
+    .date {
+      font-size: 0.8rem;
+      color: #ddd;
+    }
+  }
+
+  .today {
+    @include margin(top,3);
+    .content{@extend %deco}
+    .info{
+      .date{
+        font-weight: 700;
+      } 
+      .day{
+        color: $c1;
+        font-weight: 700;
+      }
+    }
+    p {
+      font-weight: 0.9rem;
+    }
+    a {
+      color: $c1;
+      text-decoration: underline;
+    }
+
+  }
+}
