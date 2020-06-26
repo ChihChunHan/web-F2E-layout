@@ -63,14 +63,6 @@ input, select, button {
   outline: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, small, span,
-li, th, td,
-button, a, option, label {
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: normal;
-  line-height: 1.5;
-}
-
 .d-inline {
   display: inline;
 }
@@ -923,6 +915,33 @@ button, a, option, label {
     width: calc( 100% - 20px );
   }
 }
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p, small, span,
+li, th, td,
+button, a, option, label {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
 .layout0625 {
   padding: 1rem;
   background-color: #eee;
@@ -974,6 +993,11 @@ button, a, option, label {
   border-radius: 10px;
   height: 400px;
 }
+@media screen and (min-width: 768px) {
+  .layout0625 .temp {
+    height: 600px;
+  }
+}
 .layout0625 .temp-1 {
   color: #000;
 }
@@ -1018,6 +1042,126 @@ button, a, option, label {
 .layout0625 .temp-3 .card-body span {
   font-size: 1rem;
   padding-bottom: 1rem;
+}
+
+.layout0626 .today .content::before, .layout0626 .hashtag .content::before, .layout0626 .main > h6::before {
+  content: "___";
+  margin-bottom: 1rem;
+  display: block;
+  text-align: left;
+  width: 100%;
+  color: darkred;
+}
+.layout0626 .today .content::after, .layout0626 .hashtag .content::after, .layout0626 .main > h6::after {
+  content: "___";
+  display: block;
+  text-align: right;
+  width: 100%;
+  color: darkred;
+}
+
+.layout0626 {
+  padding: 1.618rem;
+}
+.layout0626 > img {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #000;
+}
+.layout0626 .container {
+  margin-top: 2.617924rem;
+  margin-bottom: 2.617924rem;
+}
+.layout0626 .main > h1 {
+  font-size: 2em;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.layout0626 .main > h6 {
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+.layout0626 .main .card {
+  flex-basis: 31%;
+  margin-bottom: 2.617924rem;
+}
+.layout0626 .main .card-img > img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.layout0626 .main .card-body > .info {
+  margin-top: 0.5rem;
+}
+.layout0626 .main .card-body > .info span {
+  font-size: 0.8rem;
+}
+.layout0626 .main .card-body > .info span:first-of-type {
+  color: #555;
+  margin-right: 0.4rem;
+}
+.layout0626 .main .card-body > .info span:last-of-type {
+  color: darkred;
+}
+.layout0626 .main .card-body > .title {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.layout0626 .main .card-body > .footer span {
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ddd;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.layout0626 .main footer {
+  margin: 20px 0;
+}
+.layout0626 .main footer a {
+  font-size: 1.2em;
+  color: darkred;
+}
+.layout0626 h2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+@media screen and (min-width: 960px) {
+  .layout0626 .side {
+    padding-left: 4.235801032rem;
+  }
+}
+.layout0626 .hashtag .tags {
+  flex-wrap: wrap;
+}
+.layout0626 .hashtag .tags a {
+  margin-right: 1rem;
+  text-decoration: underline;
+  color: darkred;
+}
+.layout0626 .hashtag .date {
+  font-size: 0.8rem;
+  color: #ddd;
+}
+.layout0626 .today {
+  margin-top: 2.617924rem;
+}
+.layout0626 .today .info .date {
+  font-weight: 700;
+}
+.layout0626 .today .info .day {
+  color: darkred;
+  font-weight: 700;
+}
+.layout0626 .today p {
+  font-weight: 0.9rem;
+}
+.layout0626 .today a {
+  color: darkred;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=main.css.map */
